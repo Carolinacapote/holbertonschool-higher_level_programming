@@ -4,7 +4,7 @@
 
 Handle errors and exceptions in Python.
 
-###Features
+### Features
 
 - The code use the PEP 8 style.
 - The first line of the file is `#!/usr/bin/python3`
