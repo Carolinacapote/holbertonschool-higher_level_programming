@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Function that prints x elements of a list.
+
 Return: Number of elements printed
 x: Number of elements to be printed
 """
