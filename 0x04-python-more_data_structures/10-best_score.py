@@ -8,9 +8,8 @@ def best_score(a_dictionary):
 args:
     a_dictionary. Dictionary to be used
 """
-    max_score = {}
-    if a_dictionary is None:
+    if a_dictionary is not None:
+        return(max(a_dictionary))
+
+    else:
         return None
-    for key in sorted(a_dictionary):
-        max_score[key] = a_dictionary[key]
-    return(key)
