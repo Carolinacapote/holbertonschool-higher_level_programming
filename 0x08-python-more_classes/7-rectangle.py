@@ -64,7 +64,7 @@ class Rectangle:
             for j in range(self.__width):
                 print_class += '{}'.format(self.print_symbol)
             print_class += '\n'
-        return (print_class)
+        return (print_class[:-1])
 
     def __repr__(self):
         rectangle_size = (self.__width, self.__height)
