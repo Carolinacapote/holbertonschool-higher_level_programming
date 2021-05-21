@@ -59,10 +59,12 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return('')
 
-        row = self.__width * self.print_symbol
-        for i in range(self.__height - 1):
-            print(str(row))
-        return(str(row))
+        print_class = ''
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print_class += '{}'.format(self.print_symbol)
+            print_class += '\n'
+        return (print_class)
 
     def __repr__(self):
         rectangle_size = (self.__width, self.__height)
