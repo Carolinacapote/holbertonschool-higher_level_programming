@@ -17,14 +17,8 @@ class Rectangle:
 
     @property
     def width(self):
-        """Getter and setter of the instance private attribute width.
-
-        Setter sets 2 conditionals, each of one raises an Error.
-        Errors:
-            TypeError: when the value of width is not an integer.
-            ValueError: when the value of width is less than 0.
-        """
-        return self.__width
+        """Getter and setter of the instance private attribute width."""
+        return (self.__width)
 
     @width.setter
     def width(self, value):
@@ -39,15 +33,8 @@ class Rectangle:
 
     @property
     def height(self):
-        """Getter and setter of the instance private attribute height.
-
-        Setter sets 2 conditionals, each of one raises an Error.
-
-        Errors:
-            TypeError: when the value of height is not an integer.
-           ValueError: when the value of height is less than 0.
-        """
-        return self.__height
+        """Getter and setter of the instance private attribute height"""
+        return (self.__height)
 
     @height.setter
     def height(self, value):
