@@ -53,6 +53,7 @@ What do these 3 lines print?
  s1 = "Holberton"
  s2 = s1
  print(s1 is s2)
+ ```
 
 - **8-answer.txt:**
 What do these 3 lines print?
@@ -73,32 +74,32 @@ What do these 3 lines print?
 - **10-answer.txt:**
 What do these 3 lines print?
  ```
- >>> l1 = [1, 2, 3]
- >>> l2 = [1, 2, 3]
- >>> print(l1 == l2)
+ l1 = [1, 2, 3]
+ l2 = [1, 2, 3]
+ print(l1 == l2)
  ```
 
 - **11-answer.txt:**
 What do these 3 lines print?
  ```
- >>> l1 = [1, 2, 3]
- >>> l2 = [1, 2, 3]
- >>> print(l1 is l2)
+ l1 = [1, 2, 3]
+ l2 = [1, 2, 3]
+ print(l1 is l2)
  ```
 
 - **12-answer.txt:**
 What do these 3 lines print?
  ```
- >>> l1 = [1, 2, 3]
- >>> l2 = l1
- >>> print(l1 == l2)
+ l1 = [1, 2, 3]
+ l2 = l1
+ print(l1 == l2)
  ```
 
 - **13-answer.txt:**
  ```
- >>> l1 = [1, 2, 3]
- >>> l2 = l1
- >>> print(l1 is l2)
+ l1 = [1, 2, 3]
+ l2 = l1
+ print(l1 is l2)
  ```
 
 - **14-answer.txt:**
@@ -207,23 +208,23 @@ print(a is b)
 - **27-answer.txt:**
 Will the last line of this script print 139926795932424? Answer with Yes or No.
 ```
->>> id(a)
+id(a)
 139926795932424
->>> a
+a
 [1, 2, 3, 4]
->>> a = a + [5]
->>> id(a)
+a = a + [5]
+id(a)
 ```
 
 - **28-answer.txt:**
 Will the last line of this script print 139926795932424? Answer with Yes or No.
 ```
->>> a
+a
 [1, 2, 3]
->>> id (a)
+id (a)
 139926795932424
->>> a += [4]
->>> id(a)
+a += [4]
+id(a)
 ```
 
 ## Author
