@@ -1,0 +1,59 @@
+Test file for the function print_square() in 4-print_square.py
+=====================================================================
+
+Module ``print_square``
+---------------------
+
+Import the function:
+    >>> print_square = __import__('4-print_square').print_square
+
+-----------------------------
+-----------------------------
+    The function should work like this
+
+    >>> print_square(3)
+    ###
+    ###
+    ###
+
+-----------------------------
+-----------------------------
+    Agument 'size' equals to 0
+
+    >>> print_square(0)
+
+-----------------------------
+-----------------------------
+    Argument 'size' is not an integer
+
+    >>> print_square('hello')
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square(-2.5)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square(None)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+-----------------------------
+-----------------------------
+    Argument 'size' is less than 0
+
+    >>> print_square(-2)
+    Traceback (most recent call last):
+    TypeError: size must be >= 0
+
+-----------------------------
+-----------------------------
+    Incorrect amount of arguments
+
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+    >>> print_square(1, 2)
+    Traceback (most recent call last):
+    TypeError: print_square() takes 1 positional argument but 2 were given
