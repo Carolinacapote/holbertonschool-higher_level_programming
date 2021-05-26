@@ -1,0 +1,32 @@
+Test file for the function text_indentation(text) in 5-text_indentation.py
+=====================================================================
+
+Module ``text_indentation``
+---------------------
+
+Import the function:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+-----------------------------
+-----------------------------
+    Argument 'text' is not a string
+
+    >>> text_indentation(3)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(['hello', 'Python'])
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+-----------------------------
+-----------------------------
+    Incorrect amount of arguments
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    >>> text_indentation('Hello World', 'Bye World')
+    Traceback (most recent call last):
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
