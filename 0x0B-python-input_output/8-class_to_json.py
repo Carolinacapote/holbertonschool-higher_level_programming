@@ -4,7 +4,6 @@
 
 def class_to_json(obj):
     """
-    Args:
-        obj: is an instance of a Class.
+    function that returns the dc
     """
     return obj.__dict__
