@@ -34,6 +34,8 @@ class Student:
         return result
 
     def reload_from_json(self, json):
-        """Public method that replaces all attributes of the Student instance"""
+        """Public method that replaces all attributes
+        of the Student instance
+        """
         for key, val in json.items():
             self.__setattr__(key, val)
