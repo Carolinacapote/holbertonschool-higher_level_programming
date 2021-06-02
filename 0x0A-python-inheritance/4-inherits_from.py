@@ -7,7 +7,7 @@ if the object is an instance of a class that inherited from the specified class
 def inherits_from(obj, a_class):
     """
     Args:
-        obj: Any type of object.
+        obj: Any type of object
         a_class: Some type of class.
 
     Returns:
