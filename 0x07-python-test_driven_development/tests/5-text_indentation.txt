@@ -7,6 +7,28 @@ Module ``text_indentation``
 Import the function:
     >>> text_indentation = __import__('5-text_indentation').text_indentation
 
+------------------------------
+------------------------------
+
+Argument 'text' is a normal string
+
+    >>> text_indentation("Python language")
+    Python language
+
+    >>> text_indentation("Python.Language")
+    Python.
+    <BLANKLINE>
+    Language
+
+    >>> text_indentation("Python.Language? hello devs:yes you")
+    Python.
+    <BLANKLINE>
+    Language?
+    <BLANKLINE>
+    hello devs:
+    <BLANKLINE>
+    yes you
+
 -----------------------------
 -----------------------------
     Argument 'text' is not a string
