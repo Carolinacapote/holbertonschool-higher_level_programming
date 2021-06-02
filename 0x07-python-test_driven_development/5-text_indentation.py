@@ -20,13 +20,15 @@ def text_indentation(text):
     for character in text:
 
         if character in ['.', '?', ':']:
-            indented_line += character
+            indented_line = indented_line + character
             print(indented_line.strip(' '))
             print()
             indented_line = ''
 
         else:
-            indented_line += character
+            indented_line = indented_line + character
+
+    print(indented_line.strip(' '), end='')
 
 if __name__ == "__main__":
     import doctest
