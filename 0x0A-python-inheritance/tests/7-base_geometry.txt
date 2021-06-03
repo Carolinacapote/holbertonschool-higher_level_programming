@@ -107,3 +107,8 @@ Incorrect amount of arguments.
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+    >>> figure.integer_validator(,34)
+    Traceback (most recent call last):
+    ...
+    SyntaxError: invalid syntax
