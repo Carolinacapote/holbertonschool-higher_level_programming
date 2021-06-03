@@ -29,6 +29,13 @@ Checking area exception
 
 -----------------------------
 -----------------------------
+Correct number and type of arguments
+
+    >>> figure.integer_validator('width', 89)
+    >>> figure.integer_validator('my_int', 12)
+
+-----------------------------
+-----------------------------
 Value is not an integer
 
     >>> figure.integer_validator('width', 'Jhon')
