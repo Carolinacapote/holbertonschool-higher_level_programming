@@ -70,13 +70,8 @@ Import the function:
 
 -----------------------------
 -----------------------------
+Incorrect amount of arguments
 
-    If the object is not an int
-
-    >>> my_list = MyList()
-    >>> my_list.append(3)
-    >>> my_list.append('s')
-    >>> my_list.append(1)
-    >>> my_list.print_sorted()
+    >>> my_list.print_sorted(78)
     Traceback (most recent call last):
-    TypeError: unorderable types: str() < int()
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
