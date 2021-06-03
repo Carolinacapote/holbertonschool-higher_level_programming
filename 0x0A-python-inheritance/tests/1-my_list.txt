@@ -27,6 +27,8 @@ Import the function:
 
     >>> my_list = MyList()
     >>> my_list.append(2)
+    >>> print(my_list)
+    [2]
     >>> my_list.print_sorted()
     [2]
 
