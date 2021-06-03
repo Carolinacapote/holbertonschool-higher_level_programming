@@ -34,6 +34,7 @@ Correct number and type of arguments
     >>> figure.integer_validator('width', 89)
     >>> figure.integer_validator('my_int', 12)
     >>> figure.integer_validator('', 12)
+    >>> figure.integer_validator(25, 12)
 
 -----------------------------
 -----------------------------
