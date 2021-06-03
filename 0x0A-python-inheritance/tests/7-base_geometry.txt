@@ -1,0 +1,51 @@
+Test file for the class BaseGeometry in 7-base_geometry.py
+=====================================================================
+
+Module ``class``
+---------------------
+
+Import the function:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+-----------------------------
+-----------------------------
+Public instance method: integer_validator()
+    >>> "integer_validator" in dir(BaseGeometry)
+    True
+
+Public instance method: area()
+
+    >>> "area" in dir(BaseGeometry)
+    True
+
+-----------------------------
+-----------------------------
+Checking area exception
+
+    >>> figure = BaseGeometry()
+    >>> figure.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+-----------------------------
+-----------------------------
+Value is not an integer
+
+    >>> figure.integer_validator('width', 'Jhon')
+    Traceback (most recent call last):
+    ...
+    TypeError: width must be an integer
+
+-----------------------------
+-----------------------------
+Value is less or equal to 0
+
+    >>> figure.integer_validator('width', 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: width must be greater than 0
+
+    >>> figure.integer_validator('width', -8)
+    Traceback (most recent call last):
+    ...
+    ValueError: width must be greater than 0
