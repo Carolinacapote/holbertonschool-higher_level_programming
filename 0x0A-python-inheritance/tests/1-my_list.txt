@@ -59,6 +59,15 @@ Import the function:
     >>> my_list.print_sorted()
     [-3, 2, 5]
 
+     >>> my_list = MyList()
+    >>> my_list.append(-3)
+    >>> my_list.append(-5)
+    >>> my_list.append(-2)
+    >>> print(my_list)
+    [-3, -5, -2]
+    >>> my_list.print_sorted()
+    [-5, -3, -2]
+
 -----------------------------
 -----------------------------
 
