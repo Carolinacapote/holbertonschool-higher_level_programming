@@ -6,7 +6,7 @@ This folder contains the functions and classes written for this project.
 
 ### Files
 
-- **__init__.py:**
+- **\_\_init\_\_.py:**
 With this empty file, the folder models becomes a Python package.
 
 - **base.py:**
