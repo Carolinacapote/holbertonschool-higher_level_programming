@@ -13,7 +13,7 @@ In this folder, you will find all the UNITTEST files of the functions written du
 This folder contains all the main files, useful to prove the functions written during this project.
 
 - **models:**
-This folder contains the functions and classes written for this project, and an empty file called *__init__.py*. With this empty file, the folder **models** becomes a Python package.
+This folder contains the functions and classes written for this project, and an empty file called *\_\_init\_\_.py*. With this empty file, the folder **models** becomes a Python package.
 *Find a more specific README me inside this folder*
 
 ## Features
