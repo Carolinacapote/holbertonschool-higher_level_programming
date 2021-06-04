@@ -76,10 +76,14 @@ class Rectangle(Base):
 
     def display(self):  # Public method
         """This function prints in stdout the Rectangle instance with the
-        character '#'
+        character '#'. x equals to a blank space (' ') before printing the
+        columns and y equals to new line before printing the rows.
         """
+        if self.__y > 0:
+            print('\n' * (self.__y - 1))
+
         for j in range(self.__height):
-                print('#' * self.__width)
+                print(' ' * self.__x + '#' * self.__width)
 
     def __str__(self):
         """Overriding the __str__ method
