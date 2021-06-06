@@ -109,11 +109,23 @@ class Rectangle(Base):
         return str_method
 
     def update(self, *args, **kwargs):  # Public method
-        """This function assigns an argument to each attribute"""
+        """This function assigns an argument to each attribute with args
+        'kwargs' updates the value of the arguments using the key/value
+        method
+        """
         args_list = ['id', 'width', 'height', 'x', 'y']
         if args:
             for arg in range(len(args)):
                 setattr(self, args_list[arg], args[arg])
 
-        for key, value in kwargs.items():
+        for key, value in kwargs.items():  # kwargs implementation
             setattr(self, key, value)
+
+    def to_dictionary(self):  # Public method
+        """
+        Returns:
+            A dictionary representation of a 'Rectangle'
+        """
+        my_dict = {'id': self.id, 'width': self.__width,
+                   'height': self.__height, 'x': self.__x, 'y': self.__y}
+        return my_dict
