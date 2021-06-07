@@ -11,7 +11,7 @@ With this empty file, the folder models becomes a Python package.
 
 - **base.py:**
 This file contains a superclass called *Base*. This class will be the “base” of all other classes in this project.  
-Next you will find a list of the main files (find them in the [**main_files**](https://github.com/Carolinacapote/holbertonschool-higher_level_programming/tree/main/0x0C-python-almost_a_circle/main_files) folder) useful to prove this class and all its functions and methods:
+Next you will find a list of the main files (find them in the main folder of this repository) useful to prove this class and all its functions and methods:
   - 0-main.py
   - 14-main.py
   - 15-main.py
@@ -21,7 +21,7 @@ Next you will find a list of the main files (find them in the [**main_files**](h
 
 - **rectangle.py:**
 This file contains a subclass called *Rectangle*, which inherits from the superclass *Base*.  
-Next you will find a list of the main files (find them in the [**main_files**](https://github.com/Carolinacapote/holbertonschool-higher_level_programming/tree/main/0x0C-python-almost_a_circle/main_files) folder) useful to prove this class and all its functions and methods:
+Next you will find a list of the main files (find them in the main folder of this repository) useful to prove this class and all its functions and methods:
   - 1-main.py
   - 2-main.py
   - 3-main.py
@@ -34,7 +34,7 @@ Next you will find a list of the main files (find them in the [**main_files**](h
 
 - **square.py:**
 This file contains a subclass called *Square*, which inherits from the class *Rectangle*.  
-Next you will find a list of the main files (find them in the [**main_files**](https://github.com/Carolinacapote/holbertonschool-higher_level_programming/tree/main/0x0C-python-almost_a_circle/main_files) folder) useful to prove this class and all its functions and methods:
+Next you will find a list of the main files (find them in the main folder of this repository) useful to prove this class and all its functions and methods:
   - 9-main.py
   - 10-main.py
   - 11-main.py
