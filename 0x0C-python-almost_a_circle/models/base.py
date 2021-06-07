@@ -47,7 +47,7 @@ class Base:
             for obj in list_objs:
                 my_dictionary = obj.to_dictionary()
                 my_list.append(my_dictionary)
-        
+
         with open(cls.__name__ + '.json', mode='w') as my_file:
             my_file.write(cls.to_json_string(my_list))
 
@@ -92,5 +92,4 @@ class Base:
                 for dictionary in json_dictionaries:
                     instances_list.append(cls.create(**dictionary))
 
-        return instances_list 
- 
+        return instances_list
