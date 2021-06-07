@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """This module contains a superclass called *Base*"""
-import models
 import json
+from os import read
 
 
 class Base:
@@ -29,7 +29,7 @@ class Base:
             The JSON string representation of 'list_dictionaries'
             If 'list_dictionaries' is None or empty, return: []
         """
-        if list_dictionaries is None or len(list_dictionaries) <= 0:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return '[]'
 
         return json.dumps(list_dictionaries)
@@ -43,25 +43,53 @@ class Base:
         """
         my_dictionary = {}
         my_list = []
-        if list_objs is None:
-            with open('Rectangle.json', mode='w') as my_file:
-                my_file.write(my_list)
-
-        for obj in list_objs:
-            if type(obj) is models.square.Square:
-                my_dictionary = cls.to_dictionary(obj)
+        if list_objs:
+            for obj in list_objs:
+                my_dictionary = obj.to_dictionary()
                 my_list.append(my_dictionary)
         
-                with open('Square.json', mode='w') as my_file:
-                    my_file.write(cls.to_json_string(my_list))
-
-            if type(obj) is models.rectangle.Rectangle:
-                my_dictionary = cls.to_dictionary(obj)
-                my_list.append(my_dictionary)
-        
-                with open('Rectangle.json', mode='w') as my_file:
-                    my_file.write(cls.to_json_string(my_list))
+        with open(cls.__name__ + '.json', mode='w') as my_file:
+            my_file.write(cls.to_json_string(my_list))
 
     @staticmethod
     def from_json_string(json_string):  # static method
-        """"""
+        """
+        Returns:
+            The list of the JSON string representation 'json_string'
+        """
+        my_list = []
+        if json_string is None or len(json_string) == 0:
+            return my_list
+
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Returns:
+            An instance with all attributes already set.
+        """
+        if cls.__name__ == 'Rectangle':
+            dummy_shape = cls(3, 7, 5, 8)
+        if cls.__name__ == 'Square':
+            dummy_shape = cls(3, 7, 5)
+
+        dummy_shape.update(dummy_shape, **dictionary)
+        return dummy_shape
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Returns:
+            A list of instances.
+        """
+        with open(cls.__name__ + '.json', mode='r') as my_file:
+            my_list = []
+            if my_file:
+                read_file = my_file.read()
+                json_dictionary = cls.from_json_string(read_file)
+                my_list.append(cls.create(**json_dictionary))
+                return my_list
+
+            else:
+                return my_list
