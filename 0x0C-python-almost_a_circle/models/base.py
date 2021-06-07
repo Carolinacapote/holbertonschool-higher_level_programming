@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """This module contains a superclass called *Base*"""
 import json
-from os import read
+from os import path
 
 
 class Base:
@@ -83,13 +83,14 @@ class Base:
         Returns:
             A list of instances.
         """
-        with open(cls.__name__ + '.json', mode='r') as my_file:
-            my_list = []
-            if my_file:
+        instances_list = []
+        if path.exists(cls.__name__ + '.json'):
+            with open(cls.__name__ + '.json', mode='r') as my_file:
                 read_file = my_file.read()
-                json_dictionary = cls.from_json_string(read_file)
-                my_list.append(cls.create(**json_dictionary))
-                return my_list
+                json_dictionaries = cls.from_json_string(read_file)
 
-            else:
-                return my_list
+                for dictionary in json_dictionaries:
+                    instances_list.append(cls.create(**dictionary))
+
+        return instances_list 
+ 
