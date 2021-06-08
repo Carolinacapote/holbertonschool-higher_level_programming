@@ -115,3 +115,8 @@ class TestSquare(unittest.TestCase):
         s5.display()
         output = std_out_3.getvalue()
         self.assertEqual(output, ' ##\n ##\n')
+
+        def test_str_method(self):
+            """Testing the __str__ method"""
+            s1 = Square(4, 6, 2, 12)
+            self.assertEqual(s1.__str__(), '[Square] (12) 6/2 - 4')
