@@ -3,5 +3,4 @@ SELECT score,
        count(*) AS number
 FROM second_table
 GROUP BY score
-HAVING score > 1
 ORDER BY score DESC;
