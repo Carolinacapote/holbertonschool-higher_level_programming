@@ -14,11 +14,11 @@ if __name__ == '__main__':
 
     cursor = db.cursor()
 
-    cursor.execute('SELECT * FROM states ORDER BY id ASC')
+    cursor.execute('SELECT * FROM states WHERE name = %s\
+                   ORDER BY id ASC', [argv[4]])
 
-    for i in cursor.fetchall():
-        if i[1] == argv[4]:
-            print(i)
+    for state in cursor.fetchall():
+        print(state)
 
     cursor.close()
     db.close()
