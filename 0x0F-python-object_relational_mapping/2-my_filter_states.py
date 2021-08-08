@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Script that lists all states from the database hbtn_0e_0_usa
+Script that lists all states where 'name' matches argv[4]
 '''
 import MySQLdb
 from sys import argv
@@ -14,11 +14,11 @@ if __name__ == '__main__':
 
     cursor = db.cursor()
 
-    cursor.execute('SELECT * FROM states WHERE name = %s\
-                   ORDER BY id ASC', [argv[4]])
+    cursor.execute('SELECT * FROM states ORDER BY id ASC')
 
     for state in cursor.fetchall():
-        print(state)
+        if state[1] == argv[4]:
+            print(state)
 
     cursor.close()
     db.close()
