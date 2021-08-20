@@ -9,11 +9,9 @@ if __name__ == "__main__":
     from sys import argv
     from urllib import request, error, parse
 
-    new_request = request.Request(argv[1])
-
     try:
-        request.urlopen(new_request)
-        print('Index')
+        with request.urlopen(argv[1]) as response:
+            print('Index')
 
     except error.HTTPError as err:
         print('Error code: {}'.format(err.code))
