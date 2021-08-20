@@ -17,8 +17,9 @@ if __name__ == "__main__":
     }
 
     query_str = urllib.parse.urlencode(parameters)
-    data = query_str.encode('UTF-8')
+    data = query_str.encode()
 
     with urllib.request.urlopen(url, data) as response:
-        response_text = response.read()
+        response_text = response.read().decode('utf-8')
+
     print(response_text)
