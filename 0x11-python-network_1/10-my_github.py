@@ -19,4 +19,5 @@ if __name__ == "__main__":
         user_id = response.json.get('id')
     else:
         user_id = None
+
     print(user_id)
