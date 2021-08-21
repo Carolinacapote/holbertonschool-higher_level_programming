@@ -8,13 +8,14 @@ uses the GitHub API to display your id.
 
 if __name__ == "__main__":
     import requests
+    from requests.auth import HTTPBasicAuth
     from sys import argv
 
     url = 'https://api.github.com/user'
     user_name = argv[1]
     passwd = argv[2]
 
-    response = requests.get(url, auth = (user_name, passwd))
+    response = requests.get(url, auth=HTTPBasicAuth(user_name, passwd))
     user_id = response.json.get('id')
 
     print(user_id)
