@@ -15,8 +15,8 @@ if __name__ == "__main__":
     passwd = argv[2]
     response = requests.get(url, auth=HTTPBasicAuth(user_name, passwd))
 
-    if response.status_id is 200:
-        user_id = response.json.get('id')
+    if response.status_code is 200:
+        user_id = response.json().get('id')
     else:
         user_id = None
 
