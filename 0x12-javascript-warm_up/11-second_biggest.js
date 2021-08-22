@@ -5,10 +5,10 @@ const args = process.argv.slice(2);
 
 if (args.length <= 1) {
   console.log('0');
+} else {
+  const sortedArray = args.sort((a, b) => {
+    return b - a;
+  });
+
+  console.log(sortedArray[1]);
 }
-
-const sortedArray = args.sort((a, b) => {
-  return b - a;
-});
-
-console.log(sortedArray[1]);
