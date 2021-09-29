@@ -1,2 +1,2 @@
-const header = document.querySelector('header');
-header.style.color = '#FF00000';
+$ = document.querySelector('header');
+$.style.color = '#FF0000';
